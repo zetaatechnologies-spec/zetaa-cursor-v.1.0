@@ -42,7 +42,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
-          <AuthNav variant="desktop" />
+        <AuthNav />
           <Button variant="ghost" href={`tel:${SITE_CONFIG.phone}`}>
             <Phone className="h-4 w-4" />
             <span className="hidden lg:inline">Call Us</span>
@@ -73,10 +73,7 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <AuthNav
-              variant="mobile"
-              onNavigate={() => setMobileMenuOpen(false)}
-            />
+           <AuthNav />
             <Button href="/booking" className="w-full">
               Book Site Visit
             </Button>
